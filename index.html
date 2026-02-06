@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzería La Italiana | Pedidos Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍕</text></svg>">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="pizza-icon">🍕</span>
+                <h1>Pizzería <span class="highlight">La Italiana</span></h1>
+            </div>
+            <nav class="nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#menu">Menú</a>
+                <a href="#pedido">Mi Pedido</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Las Mejores Pizzas Artesanales</h2>
+                <p>Ingredientes frescos, masa casera y horno de leña. ¡Pide ahora y recibe en 30 minutos!</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">Ver Menú</a>
+                    <a href="#pedido" class="btn btn-secondary">Ver Mi Pedido</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="pizza-animation">🍕</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menú Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title">Nuestro Menú</h2>
+            <p class="section-subtitle">Selecciona tus pizzas favoritas</p>
+            
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="all">Todas</button>
+                <button class="filter-btn" data-category="tradicional">Tradicionales</button>
+                <button class="filter-btn" data-category="especial">Especiales</button>
+                <button class="filter-btn" data-category="vegetariana">Vegetarianas</button>
+            </div>
+
+            <div class="menu-grid" id="menu-container">
+                <!-- Los productos se cargan con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrito Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Mi Pedido</h3>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Los items del carrito se cargan aquí -->
+            <p class="empty-cart" id="empty-cart">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-summary">
+            <div class="total">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="btn btn-whatsapp" id="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+            </button>
+            <button class="btn btn-clear" id="clear-cart">
+                <i class="fas fa-trash"></i> Vaciar Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay para el carrito -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-info">
+                <div class="logo">
+                    <span class="pizza-icon">🍕</span>
+                    <h3>Pizzería La Italiana</h3>
+                </div>
+                <p>Av. Principal #123, Centro</p>
+                <p>Horario: 12:00 PM - 11:00 PM</p>
+                <p>Teléfono: +53 50504479</p>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5350504479" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Pizzería La Italiana. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="menu-data.js"></script>
+    <script src="script.js"></script>
+</body>
+      </html>
